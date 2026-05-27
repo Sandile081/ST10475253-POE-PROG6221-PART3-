@@ -1,0 +1,55 @@
+﻿<Window x:Class="CybersecuirtyChatbotUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CybersecuirtyChatbotUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="360"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="0" Grid.RowSpan="100" Background="Blue"/>
+        <Border Grid.Column="1" Grid.RowSpan="100" Background="Black"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom">
+            <Border Width="485" Height="47" HorizontalAlignment="Left" Background="White" CornerRadius="20">
+                <TextBox x:Name="message" Width="460" Height="47" HorizontalAlignment="Center" BorderThickness="0" Background="Transparent"/>
+
+            </Border>
+            <Button Background="Transparent" BorderThickness="0" Click="sendrequest" IsDefault="True" >
+                <Image Source="/images/send (1).png"  Width="47" Height="47" HorizontalAlignment="Right" />
+            </Button>
+
+        </StackPanel>
+
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="0">
+            <StackPanel x:Name="displaying" Orientation="Vertical">
+                <Border Background="Cyan" Width="400" Height="300" HorizontalAlignment="Left" CornerRadius="7" BorderThickness="7" BorderBrush="Transparent" >
+                    <StackPanel>
+                        <Image Source="/images/Screenshot 2026-04-28 105952.png" Width="400" Height="250"/>
+                        <TextBox Text="hello welcome to the cybersecurity awareness bot." Background="Transparent" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap"/>
+                        <TextBlock Text="I'm here to help you to stay safe online. what is your name?" />
+                    </StackPanel>
+                </Border>
+              
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Border Background="Blue" BorderThickness="2" BorderBrush="White">
+                <Image Source="/images/chatbotLogo.jpeg" Width="200" Height="300"/>
+            </Border>
+        </StackPanel>
+        
+
+    </Grid>
+</Window>
